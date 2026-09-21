@@ -7,6 +7,6 @@ import * as path from "path";
 export default defineConfig({
 	plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
 	resolve: {
-		alias: [{ find: "@", replacement: path.resolve(__dirname, "./src/") }],
+		alias: [{ find: "@", replacement: path.resolve(import.meta.dirname, "./src/") }],
 	},
 });
